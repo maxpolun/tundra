@@ -1,0 +1,4 @@
+_gotest_
+_test*
+*.8
+8.out

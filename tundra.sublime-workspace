@@ -1,0 +1,310 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"T_",
+				"Ɩ   T_MINUS"
+			],
+			[
+				"w",
+				"ν  width"
+			],
+			[
+				"i",
+				"ν  input"
+			],
+			[
+				"p",
+				"ν  pos"
+			],
+			[
+				"po",
+				"ν  pos"
+			],
+			[
+				"s",
+				"ν  start"
+			],
+			[
+				"l",
+				"ʂ  var: Variable (...)"
+			],
+			[
+				"run",
+				"ƒ   run"
+			],
+			[
+				"t",
+				"ν  tokens"
+			],
+			[
+				"do",
+				"do: Insert do |variable| … end"
+			],
+			[
+				"co",
+				"content"
+			],
+			[
+				"li",
+				"lip: link_to (path)"
+			],
+			[
+				"d",
+				"div"
+			],
+			[
+				"shoul",
+				"should"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "lex/lex.go",
+			"settings":
+			{
+				"buffer_size": 938,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lex/Makefile",
+			"settings":
+			{
+				"buffer_size": 361,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"About"
+			],
+			[
+				"rails",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"rub",
+				"Set Syntax: Ruby"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 129.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/mpolun/.config/sublime-text-2/Packages/User/Go.sublime-settings",
+		"/home/mpolun/.config/sublime-text-2/Packages/User/Base File.sublime-settings",
+		"/home/mpolun/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/mpolun/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/mpolun/src/bowlr/spec/factory.rb",
+		"/home/mpolun/src/bowlr/app/views/users/show.html.erb",
+		"/home/mpolun/src/bowlr/config/routes.rb",
+		"/home/mpolun/src/bowlr/app/views/layouts/application.html.erb",
+		"/home/mpolun/src/bowlr/db/migrate/20110920231242_email_unique.rb",
+		"/home/mpolun/src/bowlr/Gemfile",
+		"/home/mpolun/src/bowlr/Guardfile",
+		"/home/mpolun/src/bowlr/.gitignore",
+		"/home/mpolun/src/bowlr/app/views/pages/home.html.erb",
+		"/home/mpolun/src/bowlr/spec/requests/layout_links_spec.rb",
+		"/home/mpolun/src/bowlr/app/controllers/users_controller.rb",
+		"/home/mpolun/src/bowlr/spec/controllers/users_controller_spec.rb",
+		"/home/mpolun/src/bowlr/spec/spec_helper.rb",
+		"/home/mpolun/src/bowlr/config/environments/test.rb",
+		"/home/mpolun/src/bowlr/spec/controllers/pages_controller_spec.rb",
+		"/home/mpolun/src/bowlr/log/test.log",
+		"/home/mpolun/src/bowlr/app/views/pages/contact.html.erb",
+		"/home/mpolun/src/bowlr/public/index.html",
+		"/home/mpolun/src/bowlr/app/assets/stylesheets/application.css.scss",
+		"/home/mpolun/src/bowlr/app/views/pages/about.html.erb",
+		"/home/mpolun/src/bowlr/app/views/layouts/_stylesheets.html.erb",
+		"/home/mpolun/src/bowlr/app/helpers/pages_helper.rb",
+		"/home/mpolun/src/bowlr/app/helpers/application_helper.rb",
+		"/home/mpolun/src/bowlr/app/controllers/pages_controller.rb",
+		"/home/mpolun/src/bowlr/reqs.md",
+		"/home/mpolun/src/bowlr/Rakefile"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			" = ",
+			"Value",
+			"\n	start int\n	pos int\n	width int\n\n	tokens chan Token\n}\n\nfunc NewLexer(s string) (*Lexer, chan Token) {\n	l := &Lexer \n	l.input = s\n	l.tokens = make(chan Token)\n	go l.ru",
+			"run",
+			"; {",
+			"()"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "lex/lex.go",
+					"settings":
+					{
+						"buffer_size": 938,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								312,
+								312
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Go/Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lex/Makefile",
+					"settings":
+					{
+						"buffer_size": 361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								94,
+								94
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 296.0,
+	"status_bar_visible": true
+}
