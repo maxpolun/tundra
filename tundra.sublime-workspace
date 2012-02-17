@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"b",
+				"backup"
+			],
+			[
+				"r",
+				"rune"
+			],
+			[
+				"n",
+				"next"
+			],
+			[
+				"l",
+				"l"
+			],
+			[
+				"le",
+				"lexInt"
+			],
+			[
+				"T",
+				"Text	string ν"
+			],
+			[
+				"te",
+				"text	 ν"
+			],
+			[
+				"Sp",
+				"Sprintf	string ƒ"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"em",
+				"emitSingle	 ƒ"
+			],
+			[
 				"T_",
 				"Ɩ   T_MINUS"
 			],
@@ -26,10 +66,6 @@
 			[
 				"s",
 				"ν  start"
-			],
-			[
-				"l",
-				"ʂ  var: Variable (...)"
 			],
 			[
 				"run",
@@ -64,18 +100,34 @@
 	"buffers":
 	[
 		{
-			"file": "lex/lex.go",
+			"file": "parse/parse.go",
 			"settings":
 			{
-				"buffer_size": 938,
+				"buffer_size": 118,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "lex/Makefile",
+			"file": "lex/lex.go",
 			"settings":
 			{
-				"buffer_size": 361,
+				"buffer_size": 1783,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "parse/parse_test.go",
+			"settings":
+			{
+				"buffer_size": 37,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lex/lex_test.go",
+			"settings":
+			{
+				"buffer_size": 1176,
 				"line_ending": "Unix"
 			}
 		}
@@ -83,9 +135,25 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 137.0,
 		"selected_items":
 		[
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"",
 				"About"
@@ -103,7 +171,7 @@
 				"Set Syntax: Ruby"
 			]
 		],
-		"width": 392.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -120,6 +188,9 @@
 	},
 	"file_history":
 	[
+		"/home/mpolun/src/tundra/parse/parse.go",
+		"/home/mpolun/src/tundra/lex/Makefile",
+		"/home/mpolun/src/tundra/parse/Makefile",
 		"/home/mpolun/.config/sublime-text-2/Packages/User/Go.sublime-settings",
 		"/home/mpolun/.config/sublime-text-2/Packages/User/Base File.sublime-settings",
 		"/home/mpolun/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
@@ -167,6 +238,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"emit(l"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -174,6 +246,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"l.emit",
 			" = ",
 			"Value",
 			"\n	start int\n	pos int\n	width int\n\n	tokens chan Token\n}\n\nfunc NewLexer(s string) (*Lexer, chan Token) {\n	l := &Lexer \n	l.input = s\n	l.tokens = make(chan Token)\n	go l.ru",
@@ -190,23 +263,49 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "lex/lex.go",
+					"file": "parse/parse.go",
 					"settings":
 					{
-						"buffer_size": 938,
+						"buffer_size": 118,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								312,
-								312
+								115,
+								115
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Go/Go.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lex/lex.go",
+					"settings":
+					{
+						"buffer_size": 1783,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								374,
+								374
 							]
 						],
 						"settings":
@@ -221,27 +320,54 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "lex/Makefile",
+					"buffer": 2,
+					"file": "parse/parse_test.go",
 					"settings":
 					{
-						"buffer_size": 361,
+						"buffer_size": 37,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								94,
-								94
+								36,
+								36
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+							"syntax": "Packages/Go/Go.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "lex/lex_test.go",
+					"settings":
+					{
+						"buffer_size": 1176,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								214,
+								214
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Go/Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 144.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -282,7 +408,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
