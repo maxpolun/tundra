@@ -3,7 +3,7 @@ package lex
 import (
 	//"fmt"
 	"unicode"
-	"utf8"
+	"unicode/utf8"
 )
 
 const (
@@ -14,7 +14,7 @@ const (
 	T_RPAREN
 )
 
-const eof = -1
+const EOF = -1
 
 type Token struct {
 	Value int
@@ -62,30 +62,27 @@ func (l *Lexer) run() {
 		}
 	*/
 
-	for rune := l.next(); rune != eof; rune = l.next() {
-		l.emitSingle(rune)
+	for r := l.next(); r != EOF; r = l.next() {
+		l.emitSingle(r)
 	}
-	l.emit(eof)
+	l.emit(EOF)
 	close(l.tokens)
 }
 
-func (l *Lexer) endOfFile() {
-	l.tokens <- Token{Value: eof}
-}
-
 func (l *Lexer) lexInt() {
-	for rune := l.next(); unicode.IsDigit(rune); rune = l.next() {
+	for r := l.next(); unicode.IsDigit(r) && r != EOF; r = l.next() {
 	}
 	l.backup()
 	l.emit(T_INT)
 }
 
-func (l *Lexer) emitSingle(rune int) bool {
-	if unicode.IsDigit(rune) {
+func (l *Lexer) emitSingle(r rune) bool {
+	if unicode.IsDigit(r) {
 		l.backup()
 		l.lexInt()
+		return true
 	}
-	switch rune {
+	switch r {
 	case '+':
 		l.emit(T_PLUS)
 		return true
@@ -108,14 +105,15 @@ func (l *Lexer) emit(value int) {
 	l.tokens <- Token{Value: value, Text: l.input[l.start:l.pos]}
 	l.start = l.pos
 }
-func (l *Lexer) next() (rune int) {
+func (l *Lexer) next() (r rune) {
 	if l.pos >= len(l.input) {
+
 		l.width = 0
-		return eof
+		return EOF
 	}
-	rune, l.width = utf8.DecodeRuneInString(l.input[l.pos:])
+	r, l.width = utf8.DecodeRuneInString(l.input[l.pos:])
 	l.pos += l.width
-	return rune
+	return r
 }
 func (l *Lexer) backup() {
 	l.pos -= l.width

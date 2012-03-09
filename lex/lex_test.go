@@ -4,8 +4,24 @@ import "testing"
 
 func Test_EmptyShouldReturnEOF(t *testing.T) {
 	_, ch := NewLexer("")
-	if tok := <-ch; tok.Value != eof {
+	if tok := <-ch; tok.Value != EOF {
 		t.Errorf("An empty lexer should only return EOF, got %v instead", tok.Value)
+	}
+}
+func Test_OnlySpacesShouldReturnEOF(t *testing.T) {
+	_, ch := NewLexer(" ")
+	if tok := <-ch; tok.Value != EOF {
+		t.Errorf("A lexer on just spaces should only return EOF, got %v instead", tok.Value)
+	}
+}
+func Test_OnlySpacesShouldReturnOnlyOneToken(t *testing.T) {
+	_, ch := NewLexer(" ")
+	toks := make([]Token, 0, 10)
+	for tok := range ch {
+		toks = append(toks, tok)
+	}
+	if len(toks) != 1 {
+		t.Errorf("A lexer on only spaces should only return one token, got %v tokens instead all tokens = %v", len(toks), toks)
 	}
 }
 
@@ -35,7 +51,7 @@ func Test_MultipleSymbolsShouldEmitMultipleTokens(t *testing.T) {
 		T_MINUS,
 		T_LPAREN,
 		T_RPAREN,
-		eof}
+		EOF}
 
 	_, ch := NewLexer(syms)
 	i := 0
