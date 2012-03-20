@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"E",
+				"Eval"
+			],
+			[
+				"P",
+				"Parse	ASTNode ƒ"
+			],
+			[
+				"T",
+				"Token	struct ʈ"
+			],
+			[
 				"b",
 				"backup"
 			],
@@ -22,10 +34,6 @@
 			[
 				"le",
 				"lexInt"
-			],
-			[
-				"T",
-				"Text	string ν"
 			],
 			[
 				"te",
@@ -103,15 +111,7 @@
 			"file": "parse/parse.go",
 			"settings":
 			{
-				"buffer_size": 118,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lex/lex.go",
-			"settings":
-			{
-				"buffer_size": 1783,
+				"buffer_size": 507,
 				"line_ending": "Unix"
 			}
 		},
@@ -119,7 +119,15 @@
 			"file": "parse/parse_test.go",
 			"settings":
 			{
-				"buffer_size": 37,
+				"buffer_size": 1135,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lex/lex.go",
+			"settings":
+			{
+				"buffer_size": 1754,
 				"line_ending": "Unix"
 			}
 		},
@@ -135,16 +143,24 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 137.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
-				"up",
-				"Package Control: Upgrade Package"
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
 			],
 			[
 				"in",
 				"Package Control: Install Package"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
 			],
 			[
 				"ins",
@@ -188,6 +204,8 @@
 	},
 	"file_history":
 	[
+		"/home/mpolun/go/src/pkg/github.com/maxpolun/tundra/README.md",
+		"/home/mpolun/src/github.com/maxpolun/tundra/lex/Makefile",
 		"/home/mpolun/src/tundra/parse/parse.go",
 		"/home/mpolun/src/tundra/lex/Makefile",
 		"/home/mpolun/src/tundra/parse/Makefile",
@@ -238,6 +256,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"		[]",
+			"eof",
+			"Lexer",
 			"emit(l"
 		],
 		"highlight": true,
@@ -246,6 +267,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"EOF",
+			"StrLexer",
 			"l.emit",
 			" = ",
 			"Value",
@@ -263,7 +286,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -271,20 +294,21 @@
 					"file": "parse/parse.go",
 					"settings":
 					{
-						"buffer_size": 118,
+						"buffer_size": 507,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								115,
-								115
+								489,
+								489
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Go/Go.tmLanguage"
+							"syntax": "Packages/Go/Go.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -294,18 +318,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "lex/lex.go",
+					"file": "parse/parse_test.go",
 					"settings":
 					{
-						"buffer_size": 1783,
+						"buffer_size": 1135,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								374,
-								374
+								703,
+								703
 							]
 						],
 						"settings":
@@ -321,26 +345,27 @@
 				},
 				{
 					"buffer": 2,
-					"file": "parse/parse_test.go",
+					"file": "lex/lex.go",
 					"settings":
 					{
-						"buffer_size": 37,
+						"buffer_size": 1754,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								36,
-								36
+								451,
+								451
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Go/Go.tmLanguage"
+							"syntax": "Packages/Go/Go.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -357,8 +382,8 @@
 						"selection":
 						[
 							[
-								214,
-								214
+								100,
+								79
 							]
 						],
 						"settings":
@@ -367,7 +392,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 144.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

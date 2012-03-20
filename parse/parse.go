@@ -29,6 +29,7 @@ type BinOp struct {
 	Op    func(int, int) int
 	text  string
 }
+type binFunc func(int, int) int
 
 func (b *BinOp) Eval() int {
 	return b.Op(b.Left.Eval(), b.Right.Eval())
@@ -42,13 +43,17 @@ func NewParser(c chan lex.Token) Parser {
 	return p
 }
 
-var binopTable = map[string]func(int, int) int{
+var binopTable = map[string]binFunc{
 	"+": func(a, b int) int {
 		return a + b
 	},
 	"-": func(a, b int) int {
 		return a - b
 	}}
+
+func nullfunc(a, b int) int {
+	return 0
+}
 
 func parseLit(tok lex.Token) ASTNode {
 	switch tok.Value {
@@ -69,6 +74,16 @@ func strTokList(tokList []lex.Token) string {
 	return strings.Join(stringList, ", ")
 }
 
+func opFuncs(tokValue int) binFunc {
+	switch tokValue {
+	case lex.T_PLUS:
+		return binopTable["+"]
+	case lex.T_MINUS:
+		return binopTable["-"]
+	}
+	return nullfunc
+}
+
 func (p *Parser) Parse() ASTNode {
 
 	tokList := make([]lex.Token, 0, 10)
@@ -76,18 +91,16 @@ func (p *Parser) Parse() ASTNode {
 	for tok := range p.ch {
 		tokList = append(tokList, tok)
 	}
-	fmt.Printf("number of tokens to parse: %v\n", len(tokList))
-	fmt.Printf("tokens: %v\n", strTokList(tokList))
 	if len(tokList) == 0 {
 		return nil
 	}
 	if len(tokList) == 1 {
 		return parseLit(tokList[0])
 	}
-	if tokList[1].Value == lex.T_PLUS {
+	if tokList[1].Value == lex.T_PLUS || tokList[1].Value == lex.T_MINUS {
 		return &BinOp{Left: parseLit(tokList[0]),
 			Right: parseLit(tokList[2]),
-			Op:    binopTable["+"],
+			Op:    opFuncs(tokList[1].Value),
 			text:  tokList[1].Text}
 	} else {
 		return parseLit(tokList[0])

@@ -35,10 +35,13 @@ func makeFakeChan(tokens []lex.Token) (l *lex.Lexer, ch chan lex.Token) {
 func Test_PlusMinusShouldParse(t *testing.T) {
 	tokens := [][]lex.Token{
 		[]lex.Token{
-			lex.Token{lex.T_INT, "1"}, lex.Token{lex.T_PLUS, "+"}, lex.Token{lex.T_INT, "1"}}}
+			lex.Token{lex.T_INT, "1"}, lex.Token{lex.T_PLUS, "+"}, lex.Token{lex.T_INT, "1"}},
+		[]lex.Token{
+			lex.Token{lex.T_INT, "1"}, lex.Token{lex.T_MINUS, "-"}, lex.Token{lex.T_INT, "1"}}}
 
 	expected := []int{
-		2}
+		2,
+		0}
 	for index := range tokens {
 		_, ch := makeFakeChan(tokens[index])
 		p := NewParser(ch)
